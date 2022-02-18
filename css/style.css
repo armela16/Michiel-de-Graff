@@ -1,0 +1,375 @@
+/* BODY */
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "acumin-pro", Helvetica Neue, Helvetica, Arial, sans-serif;
+    cursor: url(../images/svg/icon-arrow-black.svg), auto;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+}
+/* Change Background color ,text color and icon*/
+.change{
+    background-color: #000;
+    color: #fff;
+    cursor: url(../images/svg/icon-arrow-white.svg), auto;
+}
+/*Container size */
+.container{
+    width: 70%;
+    margin-top: 150px;
+}
+ /* .header-section h3{
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+} */
+
+/*Header section */
+.header-section p:hover .link{   
+    color: #7724f8;
+}
+.logo{
+    border: none;
+    background-color: transparent;
+    background-image: url(../images/svg/logo-118x80.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 118px;
+    height: 80px;
+    /* float: right; */
+    position: fixed;
+    z-index: 1000;
+    top: 21%;
+    right: 16%; 
+    cursor: progress !important;
+}
+.header-section p{
+    margin-top: 50px;
+}
+.header-section h3{
+    font-size: 22px;
+}
+a.link{
+    text-decoration: none;
+    color: #aa73ff;
+    cursor: url(../images/svg/icon-email-black.svg), auto;
+}
+
+
+/* GRID */
+.grid{
+    display: grid;
+    margin-top: 50px;
+    grid-template: 800px 800px 800px 800px / 50% 50%; 
+}
+.grid div:nth-child(odd){
+    grid-column: 2 / 3; 
+}
+.grid div:nth-child(1){
+    grid-row: 1 / 2;
+}
+.grid div:nth-child(3){
+    grid-row: 2 / 3;
+}
+.grid div:nth-child(5){
+    grid-row: 3 / 4;
+}
+.grid div:nth-child(7){
+    grid-row: 4 / 5;
+}
+.grid div:nth-child(even){
+    transform: translateY(50%);
+}
+.grid div:nth-child(odd) img{
+    width: 92%;
+    height: auto;
+    float: right;
+}
+.grid div:nth-child(even) img{
+    width: 92%;
+    height: auto;
+    float: left;
+}
+.grid div:nth-child(odd) a{
+    float: right;
+    text-align: end;
+    text-decoration: none;
+    color: #000;
+}
+.grid div:nth-child(even) a{
+    float: left;
+    text-align: start;
+    text-decoration: none;
+    color: #000;
+}
+.grid a{
+    margin-top: 40px;
+}
+
+.grid a:hover p{
+    color: #aa73ff !important;
+    cursor: url(../images/svg/icon-link-black.svg), auto;
+}
+
+.infos p:hover .link{   
+    color: #7724f8;
+}
+.infos p{
+    margin-top: 30px;
+}
+/*Links*/
+.links{
+    margin-top: 30px;
+}
+.links h4{
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 5px;
+    font-size: 22px;
+}
+.links h4 a{
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid rgb(0,0,0,0.6);
+    cursor: url(../images/svg/icon-link-black.svg), auto !important;  
+}
+.links h4:hover a{
+    color: #aa73ff;
+    border: none;
+}
+.links h4:nth-child(1) a{
+    opacity: 0.9;  
+}
+.links h4:nth-child(2) a{
+    opacity: 0.75; 
+}
+.links h4:nth-child(3) a{
+    opacity: 0.6; 
+}
+/*Footer*/
+.footer-section h3{
+    color: rgba(0, 0, 0, 0.3);
+    padding: 80px 0;
+    font-size: 22px;
+}
+
+/* Change icon to white color when click button */
+.change .links h4 a{
+    color: #fff;
+    border-bottom: 1px solid rgb(255,255,255,0.6);
+    cursor: url(../images/svg/icon-link-white.svg), auto !important;
+}
+/*Change color when background is changed*/
+.change .footer-section h3{
+    color: rgb(255,255,255,0.5);
+}
+/* Change icon link to white color when click button */
+.change .grid a p{
+    color: #fff;
+    cursor: url(../images/svg/icon-link-white.svg), auto !important;
+}
+/* Change icon email to white color when click button */
+.change a.link{
+    cursor: url(../images/svg/icon-email-white.svg), auto !important;
+}
+
+
+/*MEDIA QUERY*/
+/* sm applies to x-small devices (portrait phones, less than 576px)*/
+@media (max-width:320px){
+    .container{
+        width: 80%;
+    }
+    /*Header*/
+    .header-section h3, .header-section p{
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .logo{
+        position: absolute;
+        top: 7%;
+        left: 12%;
+        width:90px;
+        height: 60px;
+        background-size: contain;
+    }
+    /*Grid*/
+    .grid{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .grid div a p{
+        font-size: 18px;
+        margin-bottom: 80px;
+    }
+    .grid div:nth-child(even){
+        transform: translateY(0);
+    }
+    .grid div:nth-child(odd) img{
+        width: 100%;
+        height: auto;
+    }
+    .grid div:nth-child(even) img{
+        width: 100%;
+        height: auto;  
+    }
+    /*Infos*/
+    .infos p{
+        font-size: 18px;
+    }
+    /*Links*/
+    .links h4 a{
+        font-size: 18px;
+    }
+    /*Footer*/
+    .footer-section h3{
+        font-size: 18px;
+    }
+}
+
+
+
+/* sm applies to x-small devices (portrait phones, less than 576px)*/
+@media (min-width:320.02px) and (max-width:575.98px){
+    .container{
+        width: 80%;
+        margin-top: 150px;
+    }
+    /*Header*/
+    .header-section h3, .header-section p{
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .logo{
+        position: absolute;
+        top: 7%;
+        left: 12%;
+        width:90px;
+        height: 60px;
+        background-size: contain;
+        
+    }
+    /*Grid*/
+    .grid{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;   
+    }
+    .grid div a p{
+        font-size: 18px;
+        margin-bottom: 80px;
+    }
+    .grid div:nth-child(even){
+        transform: translateY(0);
+    }
+    .grid div:nth-child(odd) img{
+        width: 100%;
+        height: auto;  
+    }
+    .grid div:nth-child(even) img{
+        width: 100%;
+        height: auto;  
+    }
+    /*Infos*/
+    .infos p{
+        font-size: 18px;
+    }
+    /*Links*/
+    .links h4 a{
+        font-size: 18px;
+    }
+    /* Footer*/
+    .footer-section h3{
+        font-size: 18px;
+    }
+}
+
+
+/* `md` applies to small devices (landscape phones, less than 768px) */
+ @media (min-width:576px) and (max-width:767.98px){
+    .container{
+        width: 85%;
+        margin-top: 150px;
+    }
+    /*Header*/ 
+    .header-section h3, .header-section p{
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .logo{
+        position: absolute;
+        top: 5%;
+        left: 12%; 
+    }
+    /*Grid*/
+    .grid{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;   
+    }
+    .grid div a p{
+        font-size: 18px;
+        margin-bottom: 80px;
+    }
+    .grid div:nth-child(even){
+        transform: translateY(0);
+    }
+    .grid div:nth-child(odd) img{
+        width: 80%;
+        height: auto;
+    }
+    .grid div:nth-child(even) img{
+        width: 80%;
+        height: auto;  
+    }
+    .infos p{
+        font-size: 18px;
+    }
+    .links h4 a{
+        font-size: 18px;
+    }
+    .footer-section h3{
+        font-size: 18px;
+    }
+}
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (min-width:768px) and (max-width:991.98px){
+    .container{
+        width: 80%;
+        margin-top: 200px;
+    }
+    /*Header*/
+    .header-section h3, .header-section p{
+        margin-top: 20px;
+    }
+    .logo{
+        position: absolute;
+        top: 10%;
+        left: 12%;  
+    }
+    /*  Grid*/
+    .grid{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;   
+    }
+    .grid div a p{
+        font-size: 18px;
+        margin-bottom: 80px;
+    }
+    .grid div:nth-child(even){
+        transform: translateY(0);
+    }
+    .grid div:nth-child(odd) img{
+        width: 80%;
+        height: auto;
+    }
+    .grid div:nth-child(even) img{
+        width: 80%;
+        height: auto;  
+    }
+  
+}
